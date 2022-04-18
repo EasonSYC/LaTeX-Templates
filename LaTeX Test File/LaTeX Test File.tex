@@ -1,0 +1,95 @@
+%!TEX TX-program = xelatex
+\documentclass{article}
+\usepackage{allan-eason}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{svg.path}
+
+\graphicspath{ {./images/}} 
+
+\newcommand{\Title}{\LaTeX\ Test File}
+\newcommand{\Author}{Eason S.}
+
+\title{\Title}
+\author{\Author}
+\date{\today}
+
+\geometry{a4paper, scale=0.8}
+
+\lhead{\Title}
+
+\begin{document}
+
+	\maketitle
+
+	\section{Maxwell's Equations}
+
+		\subsection{Integral Format}
+
+			\defword{Maxwell's Equations} (in forms of \defword{Integral}):
+
+			\begin{align}
+				\oiint_{S} \vect{D} \cdot \diff \vect{S} = \sum q &= \int_V \rho \diff V,\\
+				\oiint_{S} \vect{B} \cdot \diff \vect{S} &= 0,\\
+				\oint_{L} \vect{H} \cdot \diff \vect{l} = I + I_{\diff} &= \int_{S} \vect{j} \cdot \diff \vect{S} + \int_{S} \frac{\partial \vect{D}}{\partial t} \cdot \diff \vect{S},\\
+				\oint_{L} \vect{E} \cdot \diff \vect{l} = - \frac{\diff \varPhi}{\diff t} &= - \int_{S} \frac{\partial \vect{B}}{\partial t} \cdot \diff \vect{S}.
+			\end{align}
+
+			Here, (1) states for the \defword{Gauss Theorem} in an \defword{Electric Field}, while (2) states for the \defword{Gauss Theorem} in an \defword{Magnetic Field}. (3) states for the relationship between \defword{A Changing Electric Field} and a magnetic field, or \defword{Ampere's Circulation Theorem}. (4) states for the relationship between \defword{A Changing Magnetic Field} and a electric field, or \defword{Faraday's Theorem of induction}.
+
+	\section{Partial Derivative}
+
+		\subsection{Definition}
+
+			Let \(t=f(x, y, \ldots)\), the \defword{Partial Derivative} of \(f\) towards \(x\) is
+
+			\[
+				f'_{x} = \partial_x f = D_x f = D_1 f = \frac{\partial}{\partial x} f = \frac{\partial f}{\partial x} = \lim_{\Delta x \rightarrow 0} \frac{f(x + \Delta x, y, \ldots) - f(x, y, \ldots)}{\Delta x}.
+			\]
+
+			Define vector \(\vect{a} = (x, y, \ldots), \vect{\hat{e}_x} = (1, 0, \ldots)\), therefore
+
+			\[
+				\frac{\partial}{\partial x} f = \lim_{x\rightarrow 0} \frac{f(\vect{a} + h \vect{e_x}) - f(\vect{a})}{h}.
+			\]
+
+		\subsection{Gradient}
+
+			Define \defword{Gradient} as following:
+
+			\[
+				\Grad f(\vect{a}) = \nabla f(\vect{a}) = \left(\at{\frac{\partial f}{\partial x}}{\vect{a}}, \at{\frac{\partial f}{\partial y}}{\vect{a}}, \ldots\right).
+			\]
+
+			We usually deine Gradient as following in a 3-Dimensional Space:
+
+			\[
+				\Grad = \nabla = \left[\frac{\partial}{\partial x}\right]\vect{\hat{e}_x} + \left[\frac{\partial}{\partial y}\right]\vect{\hat{e}_y} + \left[\frac{\partial}{\partial z}\right]\vect{\hat{e}_z}.
+			\]
+
+		\subsection{Directional Derivative}
+
+			Define the \defword{Directional Derivative} along vector \(\vect{v} = \left(v_1, v_2, \ldots\right)\),
+
+			\[
+				\nabla_{\vect{v}} f(\vect{a}) = \lim_{x \rightarrow 0} \frac{f(\vect{a} + h \vect{v}) - f(\vect{a})}{h}.
+			\]
+
+		\subsection{Laplace Operator}
+
+			Define the \defword{Laplace Operator} as following:
+
+			\[
+				\Delta = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2} = \nabla \cdot \nabla = \nabla^2.
+			\]
+
+		\subsection{Divergence}
+
+			Define the \defword{Divergence} of a vector as following: (it outputs a value)
+
+			\[
+				\Div \vect{v} = \nabla \cdot \vect{v} = \left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z} \right) \cdot \left(v_x, v_y, v_z\right) = \frac{\partial v_x}{\partial x} + \frac{\partial v_y}{\partial y} + \frac{\partial v_z}{\partial z}.
+			\]
+
+
+\end{document}
