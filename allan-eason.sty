@@ -216,6 +216,14 @@
 \newcommand{\updatesubfact}{\refstepcounter{asubfact}}
 \newcommand{\subfact}{\sub{\color{allangreen} Proof of Fact \updatesubfact\showsubfact}}
 
+\newcounter{aproblem}[section]
+\newcounter{asubproblem}[section]
+\newcommand{\showproblem}{\thesection.\arabic{aproblem}}
+\newcommand{\showsubproblem}{\thesection.\arabic{asubproblem}}
+\newcommand{\updateproblem}{\refstepcounter{aproblem}}
+\newcommand{\updatesubproblem}{\refstepcounter{asubproblem}}
+\newcommand{\subproblem}{\sub{\color{allancyan} Solution to Problem \updatesubproblem\showsubproblem}}
+
 % for pseudocode
 \lstset{
 	language=python, 					% Python highlight
@@ -322,6 +330,36 @@
     subtitleinneraboveskip = 0.4\baselineskip,
     subtitleinnerbelowskip = 0.4\baselineskip,
 ]{allanclaim}
+
+%%% Eason Problem
+
+\newmdenv[%
+    % documentation: https://mirror.foobar.to/CTAN/macros/latex/contrib/mdframed/mdframed.pdf
+    skipabove = 0.5cm,
+    skipbelow = 0.5cm,
+    leftmargin = 0cm,
+    rightmargin = 0cm,
+    linewidth = 1pt,
+    roundcorner = 5pt,
+    linecolor = black,
+    backgroundcolor = allancyan!5,%
+    %
+    % frametitle settings
+    frametitle = {\color{allancyan} Problem \updateproblem\showproblem},
+    frametitlerule = true,
+    frametitlebackgroundcolor = allancyan!15,%
+    %
+    % subtitle settings
+    subtitleabovelinecolor = allancyan,
+    subtitlebelowlinecolor = allancyan,
+    subtitlebelowline=true,
+    subtitleaboveline=true,
+    subtitlebackgroundcolor = allancyan!15,
+    subtitleinneraboveskip = 0.4\baselineskip,
+    subtitleinnerbelowskip = 0.4\baselineskip,
+]{easonproblem}
+
+%%% Eason Problem
 
 \newmdtheoremenv[%
     skipabove = 0.5cm,
