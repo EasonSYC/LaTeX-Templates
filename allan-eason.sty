@@ -223,6 +223,7 @@
 \newcommand{\updateproblem}{\refstepcounter{aproblem}}
 \newcommand{\updatesubproblem}{\refstepcounter{asubproblem}}
 \newcommand{\subproblem}{\sub{\color{allancyan} Solution to Problem \updatesubproblem\showsubproblem}}
+\newcommand{\subbigproblem}{\sub{\color{allanorange} Solution to Problem \updatesubproblem\showsubproblem}}
 
 % for pseudocode
 \lstset{
@@ -358,6 +359,32 @@
     subtitleinneraboveskip = 0.4\baselineskip,
     subtitleinnerbelowskip = 0.4\baselineskip,
 ]{easonproblem}
+
+\newmdenv[%
+    % documentation: https://mirror.foobar.to/CTAN/macros/latex/contrib/mdframed/mdframed.pdf
+    skipabove = 0.5cm,
+    skipbelow = 0.5cm,
+    leftmargin = 0cm,
+    rightmargin = 0cm,
+    linewidth = 1pt,
+    roundcorner = 5pt,
+    linecolor = black,
+    backgroundcolor = allanorange!5,%
+    %
+    % frametitle settings
+    frametitle = {\color{allanorange} Problem \updateproblem\showproblem},
+    frametitlerule = true,
+    frametitlebackgroundcolor = allanorange!15,%
+    %
+    % subtitle settings
+    subtitleabovelinecolor = allanorange,
+    subtitlebelowlinecolor = allanorange,
+    subtitlebelowline=true,
+    subtitleaboveline=true,
+    subtitlebackgroundcolor = allanorange!15,
+    subtitleinneraboveskip = 0.4\baselineskip,
+    subtitleinnerbelowskip = 0.4\baselineskip,
+]{easonbigproblem}
 
 %%% Eason Problem
 
