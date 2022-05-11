@@ -66,6 +66,9 @@
 \usepackage{titling}
 \usepackage{fancyhdr}
 
+% for citation
+\usepackage{hyperref}
+
 \pretitle{
     \begin{center}
         \color{black}\normalfont\Huge\bfseries
@@ -95,7 +98,7 @@
 \titleformat{\subsubsection}{\color{black}\normalfont\large\bfseries}{\color{allandarkblue} \textbf{\S \thesubsubsection}}{0.1cm}{}
 
 % for hyperlink
-\usepackage[colorlinks, linkcolor = allandarkblue]{hyperref}
+% \usepackage[colorlinks, linkcolor = allandarkblue]{hyperref}
 
 % for headers
 \usepackage[english]{babel}
@@ -131,6 +134,10 @@
 \definecolor{stringcolor}{RGB}{206,145,108}
 \definecolor{keywordcolor}{RGB}{34,34,250}
 \definecolor{backcolor}{RGB}{220,220,220}
+
+% for citation
+
+\hypersetup{colorlinks, linkcolor={allandarkblue}, citecolor={allangreen}, urlcolor={allanred}} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Part Three - Frequent mathematical symbols
